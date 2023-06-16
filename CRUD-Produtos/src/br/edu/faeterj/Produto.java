@@ -7,11 +7,11 @@ public class Produto{
 	String nome;
 	String descricao;
 	String categoria;
-	int preco;
+	float preco;
 	float peso;
 	String fabricante;
 	
-	public Produto(int id, String codBarras, String sku, String nome, String descricao, String categoria, int preco, float peso, String fabricante){
+	public Produto(int id, String codBarras, String sku, String nome, String descricao, String categoria, String fabricante, float preco, float peso){
 		this.id = id;
 		this.codBarras = codBarras;
 		this.sku = sku;

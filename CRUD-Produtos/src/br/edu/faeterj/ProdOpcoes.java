@@ -11,17 +11,34 @@ public class ProdOpcoes{
 		String nome;
 		String descricao;
 		String categoria;
-		int preco;
-		float peso;
 		String fabricante;
+		float preco;
+		float peso;
 		
 		switch(k){
 	    case 1:
 	    	System.out.println("\n<<<Opcao selecionada: Incluir produto>>>\n");
-	    	System.out.println("int identificador: ");
-	    	x = sc.nextInt();
 	    	
-	    	produtoLista.add(new Produto(id, codBarras, sku, nome, descricao, categoria, preco, peso, fabricante));
+	    	System.out.println("\nint identificador: ");
+	    	id = sc.nextInt();
+	    	System.out.println("\nString codBarras: ");
+	    	codBarras = sc.nextLine();
+	    	System.out.println("\nString sku: ");
+	    	sku = sc.nextLine();
+	    	System.out.println("\nString nome: ");
+	    	nome = sc.nextLine();
+	    	System.out.println("\nString descricao: ");
+	    	descricao = sc.nextLine();
+	    	System.out.println("\nString categoria: ");
+	    	categoria = sc.nextLine();
+	    	System.out.println("\nString fabricante: ");
+	    	fabricante = sc.nextLine();
+	    	System.out.println("\nint preco: ");
+	    	preco = sc.nextFloat();
+	    	System.out.println("\nint peso: ");
+	    	peso = sc.nextFloat();
+	    	
+	    	produtoLista.add(new Produto(id, codBarras, sku, nome, descricao, categoria, fabricante, preco, peso));
 	    	break;
 	    case 2:
 	    	System.out.println("\n<<<Opcao selecionada: Alterar produto>>>\n");
@@ -41,8 +58,10 @@ public class ProdOpcoes{
 	    	break;
 	    default:
 	    	System.out.println("\n<<<Opcao selecionada: Encerrar>>>\n");
+	    	sc.close();
 	    	return true;
 		}
+		sc.close();
 		return false;
 	}
 }
